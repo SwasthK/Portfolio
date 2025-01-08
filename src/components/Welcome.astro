@@ -3,7 +3,7 @@ import { ChevronRight, GithubIcon, Linkedin, Twitter } from "lucide-react";
 import { projects, experience, intro } from "@/Data/data";
 ---
 
-<main class="h-screen flex justify-center items-center text-white">
+<main class="h-screen flex justify-center items-center text-white bg-cover ">
   <div class="h-fit px-4 max-w-[28rem]">
     <div class="flex gap-6 py-4">
       <img
@@ -12,16 +12,16 @@ import { projects, experience, intro } from "@/Data/data";
         class="h-16 w-16 sm:h-20 sm:w-20 object-cover object-center rounded-full"
       />
       <div class="flex flex-col gap-2">
-        <p class="text-xl font-semibold">
+        <p class="text-xl font-semibold bg-blur fade-in">
           Myself ,<span class="text-custom-tertiary"> Swasthik K</span>
         </p>
-        <p class="text-xs text-custom-secondary font-geist-mono">
+        <p class="text-xs text-custom-secondary font-geist-mono bg-blur fade-in">
           JS | TS <span class="text-sm">developer</span>
         </p>
         <div
           class="flex gap-3 font-mono text-sm items-start sm:items-center flex-col sm:flex-row"
         >
-          <div class="flex justify-start gap-6 items-center">
+          <div class="flex justify-start gap-6 items-center bg-blur fade-in">
             <a href="https://github.com/SwasthK" target="_blank">
               <GithubIcon size={18} className="cursor-pointer" /></a
             >
@@ -34,7 +34,7 @@ import { projects, experience, intro } from "@/Data/data";
               ><Linkedin size={18} className="cursor-pointer" /></a
             >
           </div>
-          <p>swasth319@gmail.com</p>
+          <p class="bg-blur fade-in">swasth319@gmail.com</p>
         </div>
       </div>
     </div>
@@ -44,19 +44,19 @@ import { projects, experience, intro } from "@/Data/data";
         intro.map((item) => (
           <div class="group-content">
             <ChevronRight size={18} />
-            <p>{item.desc}</p>
+            <p class="bg-blur fade-in">{item.desc}</p>
           </div>
         ))
       }
     </div>
 
     <div class="group-box">
-      <p class="group-label">Projects</p>
+      <p class="group-label bg-blur fade-in">Projects</p>
       {
         projects.map((item) => (
           <div class="group-content">
             <ChevronRight size={18} />
-            <p>
+            <p class="bg-blur fade-in">
               <a class="group-link" href={item.url} target="_blank">
                 {item.head}
               </a>
@@ -68,11 +68,11 @@ import { projects, experience, intro } from "@/Data/data";
     </div>
 
     <div class="group-box">
-      <p class="group-label">Experience</p>
+      <p class="group-label bg-blur fade-in">Experience</p>
 
       <div class="group-content">
         <ChevronRight size={40} />
-        <p>
+        <p class="bg-blur fade-in">
           Worked as an intern at <a
             class="group-link"
             href="https://codelabsystems.in/"
@@ -128,4 +128,23 @@ import { projects, experience, intro } from "@/Data/data";
   .group-link {
     @apply text-custom-default;
   }
+
+  .fade-in {
+  animation: fadeIn 2s ease-in-out; /* Adjust the timing and easing as needed */
+}
+
+.bg-blur {
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 </style>
