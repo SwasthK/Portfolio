@@ -3,25 +3,33 @@ import { ChevronRight, GithubIcon, Linkedin, Twitter } from "lucide-react";
 import { projects, experience, intro } from "@/Data/data";
 ---
 
-<main class="h-screen flex justify-center items-center text-white bg-cover ">
+<main class="h-screen flex justify-center items-center text-white bg-cover">
   <div class="h-fit px-4 max-w-[28rem]">
     <div class="flex gap-6 py-4">
       <img
         src="https://res.cloudinary.com/dvpaztqr9/image/upload/f_auto,q_auto/v1/Profile/oekzfujgxvm9tnecyo0v"
         alt="Profile"
-        class="h-16 w-16 sm:h-20 sm:w-20 object-cover object-center rounded-full"
+        class="animated-text-100 h-16 w-16 sm:h-20 sm:w-20 object-cover object-center rounded-full"
       />
       <div class="flex flex-col gap-2">
-        <p class="text-xl font-semibold bg-blur fade-in">
-          Myself ,<span class="text-custom-tertiary"> Swasthik K</span>
-        </p>
-        <p class="text-xs text-custom-secondary font-geist-mono bg-blur fade-in">
+        <div class="flex gap-2">
+          <p class="text-xl font-semibold animated-text-100">Myself ,</p>
+          <p
+            class="text-xl font-semibold text-custom-tertiary animated-text-100"
+          >
+            Swasthik K
+          </p>
+        </div>
+
+        <p
+          class="text-xs text-custom-secondary font-geist-mono animated-text-100"
+        >
           JS | TS <span class="text-sm">developer</span>
         </p>
         <div
-          class="flex gap-3 font-mono text-sm items-start sm:items-center flex-col sm:flex-row"
+          class="flex gap-3 font-mono text-sm items-start sm:items-center flex-col sm:flex-row animated-text-100"
         >
-          <div class="flex justify-start gap-6 items-center bg-blur fade-in">
+          <div class="flex justify-start gap-6 items-center">
             <a href="https://github.com/SwasthK" target="_blank">
               <GithubIcon size={18} className="cursor-pointer" /></a
             >
@@ -34,7 +42,7 @@ import { projects, experience, intro } from "@/Data/data";
               ><Linkedin size={18} className="cursor-pointer" /></a
             >
           </div>
-          <p class="bg-blur fade-in">swasth319@gmail.com</p>
+          <a href="mailto:swasth319@gmail.com" target="_blank" class="">swasth319@gmail.com</a>
         </div>
       </div>
     </div>
@@ -42,21 +50,23 @@ import { projects, experience, intro } from "@/Data/data";
     <div class="group-box">
       {
         intro.map((item) => (
-          <div class="group-content">
-            <ChevronRight size={18} />
-            <p class="bg-blur fade-in">{item.desc}</p>
+          <div class="group-content animated-text-200">
+            <div>
+              <ChevronRight size={18} />
+            </div>
+            <p class="">{item.desc}</p>
           </div>
         ))
       }
     </div>
 
-    <div class="group-box">
-      <p class="group-label bg-blur fade-in">Projects</p>
+    <div class="group-box animated-text-300">
+      <p class="group-label">Projects</p>
       {
         projects.map((item) => (
           <div class="group-content">
             <ChevronRight size={18} />
-            <p class="bg-blur fade-in">
+            <p class="">
               <a class="group-link" href={item.url} target="_blank">
                 {item.head}
               </a>
@@ -67,16 +77,17 @@ import { projects, experience, intro } from "@/Data/data";
       }
     </div>
 
-    <div class="group-box">
-      <p class="group-label bg-blur fade-in">Experience</p>
+    <div class="group-box animated-text-300">
+      <p class="group-label">Experience</p>
 
       <div class="group-content">
         <ChevronRight size={40} />
-        <p class="bg-blur fade-in">
+        <p class="">
           Worked as an intern at <a
             class="group-link"
             href="https://codelabsystems.in/"
-            target="_blank">Codelab Systems</a> for 1 week & explored stacks like JS, React, MUI, MongoDB & Express.js.
+            target="_blank">Codelab Systems</a
+          > for 1 week & explored stacks like JS, React, MUI, MongoDB & Express.js.
         </p>
       </div>
     </div>
@@ -90,27 +101,6 @@ import { projects, experience, intro } from "@/Data/data";
     height: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  pre {
-    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-      Consolas, "DejaVu Sans Mono";
-    font-weight: normal;
-    background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0;
-  }
-
-  code {
-    display: inline-block;
-    background:
-      linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-      linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 6px 8px;
   }
 
   .group-box {
@@ -129,22 +119,53 @@ import { projects, experience, intro } from "@/Data/data";
     @apply text-custom-default;
   }
 
-  .fade-in {
-  animation: fadeIn 2s ease-in-out; /* Adjust the timing and easing as needed */
-}
-
-.bg-blur {
-  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
-}
-
-/* Keyframes for the fade-in effect */
-@keyframes fadeIn {
-  0% {
+  .animated-text-100 {
     opacity: 0;
+    animation: fadeIn 1s 0.1s ease-in-out forwards;
   }
-  100% {
-    opacity: 1;
-  }
-}
 
+  .animated-text-200 {
+    opacity: 0;
+    animation: fadeIn 1s 0.3s ease-in-out forwards;
+  }
+
+  .animated-text-300 {
+    opacity: 0;
+    animation: fadeIn 1s 0.5s ease-in-out forwards;
+  }
+
+  .animated-text-400 {
+    opacity: 0;
+    animation: fadeIn 1s 0.8s ease-in-out forwards;
+  }
+
+  .animate-primary {
+    opacity: 1;
+    /* filter: blur(0); */
+    animation: fadeIn-primary 1.4s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  @keyframes fadeIn-primary {
+    0% {
+      color: #737373;
+      opacity: 0;
+      filter: blur(1px);
+    }
+    100% {
+      color: #ffffff;
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
 </style>
