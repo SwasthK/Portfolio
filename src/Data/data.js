@@ -1,14 +1,22 @@
-export const intro = [{
-    desc: "Another tech lover from India",
-}, {
-    desc: "Works mostly on MERN stack & related technologies",
-}, {
-    desc: "Likes to design & watch movies in free time",
-}, {
-    desc: "Currently working on dynamic event management system for college"
-}, {
-    desc: "Let's connect and explore how we can collaborate effectively!",
-}]
+import { GithubIcon } from "lucide-react";
+
+export const intro = [
+    {
+        desc: "Another tech lover from India",
+    },
+    {
+        desc: "Works mostly on MERN stack & related technologies",
+    },
+    {
+        desc: "Likes to design & watch movies in free time",
+    },
+    {
+        desc: "Currently working on dynamic event management system for college"
+    },
+    {
+        desc: "Let's connect and explore how we can collaborate effectively!",
+    }
+]
 
 export const projects = [
     {
