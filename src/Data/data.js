@@ -1,17 +1,16 @@
-import { GithubIcon } from "lucide-react";
 
 export const intro = [
     {
-        desc: "Another tech lover from India",
+        desc: "Another tech lover from India.",
     },
     {
-        desc: "Works mostly on MERN stack & related technologies",
+        desc: "Works mostly on MERN stack & related technologies.",
     },
     {
-        desc: "Likes to design & watch movies in free time",
+        desc: "Likes to design & watch movies in free time.",
     },
     {
-        desc: "Currently working on dynamic event management system for college"
+        desc: "Currently working on dynamic event management system for college."
     },
     {
         desc: "Let's connect and explore how we can collaborate effectively!",
@@ -21,19 +20,19 @@ export const intro = [
 export const projects = [
     {
         head: "Scribble",
-        desc: "Full-Stack Modern Blog Platform",
+        desc: "A Full-Stack Modern Blog Platform.",
         url: "https://scribble-orpin.vercel.app/",
         stack: ["Hono,React,TS"],
     },
     {
         head: "Ekashunyam",
-        desc: "An Inter-college fest Management System",
+        desc: "An Inter-college fest Management System.",
         url: "https://ekashunyam.tech/",
         stack: ["Express", "MongoDB", "React", "AWS"],
     },
     {
         head: "FoodStories",
-        desc: "A food recipe sharing platform",
+        desc: "A food recipe sharing platform.",
         url: "https://foodstories.netlify.app/",
         stack: ["React", "Tailwind", "TS"],
     },

@@ -2,7 +2,6 @@ import React, { use } from "react";
 
 export const AvatarComponent = () => {
   const [show, setShow] = React.useState(false);
-  React.useEffect(() => {console.log(show)}, [show]);
   return (
     <>
       <img

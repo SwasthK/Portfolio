@@ -6,6 +6,11 @@
   display: none;
 }
 
+::selection {
+  background: #ff0080;
+  color: #ffffff;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -70,9 +75,54 @@
   }
 }
 
+main {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.group-box {
+  @apply flex flex-col gap-2 py-4;
+}
+
+.group-label {
+  @apply font-semibold;
+}
+
+.group-content {
+  @apply w-full flex gap-4 items-center text-sm font-geist-mono text-custom-secondary;
+}
+
+.group-link {
+  @apply text-custom-default cursor-pointer hover:text-[#9a9797] transition-colors ease-in duration-150;
+}
+
 .animated-text-100 {
   opacity: 0;
   animation: fadeIn 1s 0.1s ease-in-out forwards;
+}
+
+.animated-text-200 {
+  opacity: 0;
+  animation: fadeIn 1s 0.3s ease-in-out forwards;
+}
+
+.animated-text-300 {
+  opacity: 0;
+  animation: fadeIn 1s 0.5s ease-in-out forwards;
+}
+
+.animated-text-400 {
+  opacity: 0;
+  animation: fadeIn 1s 0.8s ease-in-out forwards;
+}
+
+.animate-primary {
+  opacity: 1;
+  /* filter: blur(0); */
+  animation: fadeIn-primary 1.4s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -86,6 +136,15 @@
   }
 }
 
-.bx{
-  border: 5px solid #fff;
+@keyframes fadeIn-primary {
+  0% {
+    color: #737373;
+    opacity: 0;
+    filter: blur(1px);
+  }
+  100% {
+    color: #ffffff;
+    opacity: 1;
+    filter: blur(0);
+  }
 }
