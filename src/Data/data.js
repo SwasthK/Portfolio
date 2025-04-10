@@ -27,8 +27,8 @@ export const projects = [
     {
         head: "Ekashunyam",
         desc: "An Inter-college fest Management System.",
-        url: "https://ekashunyam.tech/",
-        stack: ["Express", "MongoDB", "React", "AWS"],
+        url: "https://ekashunyam.xyz",
+        stack: ["Next.js", "PostreSql", "Typescript", "Gsap"],
     },
     {
         head: "FoodStories",
