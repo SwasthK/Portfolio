@@ -1,28 +1,23 @@
-import { ProjectsDataTypes } from "@/lib/types";
-import Image from "next/image";
+import { ProjectsDataTypes } from "@/lib/types/types-project";
 import Link from "next/link";
 import React, { Fragment } from "react";
+import { RenderWYSIWYG } from "../render-wysiwyg";
+import { DynamicLocalImage } from "../image/blur-dynamic";
 
-export function ProjectDetailsContainer({
-  project,
-}: {
-  project: ProjectsDataTypes;
-}) {
+export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
   return (
     <div className="flex flex-col gap-6 sans">
       <div className="flex flex-col gap-1">
         <h1 className="text-2xl font-[500]">{project.name}</h1>
         <p className="text-sm text-[#4F576C] font-light">{project.desc}</p>
       </div>
-      <div className="relative w-full h-96 overflow-hidden rounded-[5px]">
-        <Image
-          width={1000}
-          height={500}
-          src={project.cover}
-          alt={project.name}
-          className=" absolute w-full h-full  object-cover "
-        />
-      </div>
+      <DynamicLocalImage
+        classcontainer="relative aspect-video overflow-hidden rounded-[5px]"
+        classimage="absolute w-full h-full  object-cover"
+        src={project.cover}
+        alt={project.name}
+      />
+
       <div className="flex  gap-4 items-start w-full text-sm ">
         {project.links?.map((l) => {
           const Icon = l.icon;
@@ -54,28 +49,34 @@ export function ProjectDetailsContainer({
         </div>
       </div>
       <div>
-        <p className="text-sm text-black">Description : </p>
-        <p className="text-[0.95rem] text-[#4F576C]  mt-2">
-          {/* <p className="  mt-2"> */}
-          {project.content}
-        </p>
+        {/* <p className="text-sm text-black">Description : </p> */}
+        <RenderWYSIWYG content={project.content} />
+        {/* {project.content.map((content, index) => (
+          <div key={index}>
+            <p className="text-[0.95rem] text-[#4F576C]  mt-2">
+              {content}
+            </p>
+            <br />
+          </div>
+        ))} */}
       </div>
       <div>
         <div className="grid grid-cols-2 gap-3">
           {project.images?.map((image, index) => (
-            <div key={index + 1} className="relative aspect-square">
-              <Image
-                src={image}
-                alt={image}
-                fill
-                className="rounded-[5px] absolute w-full  object-cover "
-              />
-            </div>
+            <DynamicLocalImage
+              key={index}
+              classcontainer="relative aspect-square"
+              classimage="rounded-[5px] absolute w-full  object-cover"
+              src={image}
+              alt={image}
+            />
           ))}
         </div>
       </div>
       <div>
-        <p className="text-[0.95rem] text-[#4F576C]  mt-2">{project.summary}</p>
+        <p className="text-[0.95rem] text-[#3f485e] italic mt-2">
+          &ldquo; {project.summary} &rdquo;
+        </p>
       </div>
     </div>
   );

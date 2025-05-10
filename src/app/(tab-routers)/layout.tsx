@@ -1,7 +1,8 @@
 import { Avatar } from "@/components/avatar";
 import { DashLine } from "@/components/dashline";
 import RouterSwitch from "@/components/router-switch";
-import { profile } from "@/lib/data";
+import { profile } from "@/lib/data/data-profile";
+
 
 
 export default async function TabRouterLayout({

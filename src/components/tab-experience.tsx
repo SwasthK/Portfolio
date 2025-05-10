@@ -1,34 +1,34 @@
-import { experienceData } from "@/lib/data";
-import { profile } from "console";
+import { experienceData } from "@/lib/data/data-experience";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { DynamicLocalImage } from "./image/blur-dynamic";
 
 export function TabExperience() {
   return (
     <div className="min-h-[50vh]">
-      <div className="grid grid-cols-1  gap-4 gap-y-10 py-3 w-full items-center justify-between ">
+      <div className="grid grid-cols-1 gap-4  gap-y-10 py-3 w-full items-center justify-between ">
         {experienceData.map((e) => (
           <div
             key={e.name}
-            className="flex gap-4 sm:gap-2  flex-col cursor-pointer bg-[#EDEDED] border duration-200 p-6 rounded-md relative"
+            className="flex gap-4  flex-col cursor-pointer bg-[#EDEDED] border duration-200 p-6 rounded-md relative"
           >
-            <Image
-              src={e.image||''}
-              alt={profile.name}
-              width={80}
-              height={80}
-              className=" object-contain object-center rounded-md absolute top-0 right-10"
-            />
-
             <div className="flex justify-between items-center">
-              <p className="text-[1rem] sans font-medium">{e.name}</p>
+              <div className="flex flex-col">
+                <p className="text-[1rem] sans font-medium">{e.name}</p>
+                <div className=" bg-[#EDEDED] text-[0.6rem] sans font-normal w-fit px-2 rounded-md">
+                  {e.date}
+                </div>
+              </div>
+              <DynamicLocalImage
+                src={e.image}
+                alt={e.name}
+                classcontainer="relative w-28 h-14"
+                classimage="absolute object-contain object-center rounded-md "
+              />
             </div>
-            <div className=" bg-[#EDEDED] text-[0.6rem] sans font-normal w-fit px-2 rounded-md">
-              {e.date}
-            </div>
+
             <p className="text-[#4F576C] text-sm sans font-light">{e.desc}</p>
-            <div className="flex gap-2 items-start ">
+            <div className="flex gap-2 items-start flex-wrap">
               {e.stacks.map((item) => (
                 <div
                   key={item}
@@ -40,6 +40,7 @@ export function TabExperience() {
             </div>
             <Link
               href={e.url}
+              target="_blank"
               className="flex gap-1 w-full items-end justify-end"
             >
               <p className="text-sm underline text-right">View</p>

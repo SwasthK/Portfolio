@@ -1,5 +1,5 @@
-import { projectsData } from "@/lib/data";
-import Image from "next/image";
+import { DynamicLocalImage } from "@/components/image/blur-dynamic";
+import { projectsData } from "@/lib/data/data-project";
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -15,14 +15,12 @@ export default function ProjectsPage() {
             href={`/projects/${project.slug}`}
             className="flex gap-2  flex-col cursor-pointer hover:bg-[#EDEDED] border duration-200 p-2 rounded-md ease-in"
           >
-            <div className="relative w-full h-32 rounded-md overflow-hidden">
-              <Image
-                src={project.cover}
-                fill
-                alt={project.name}
-                className="cover object-cover absolute top-0 left-0 w-full h-full"
-              />
-            </div>
+            <DynamicLocalImage
+              classcontainer="relative w-full h-32 rounded-md overflow-hidden"
+              classimage="cover object-cover absolute top-0 left-0 w-full h-full"
+              src={project.cover}
+              alt={project.name}
+            />
 
             <div className="flex justify-between items-center">
               <p className="text-[1rem] sans font-medium">{project.name}</p>

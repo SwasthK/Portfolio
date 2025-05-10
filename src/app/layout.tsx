@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
-import Footer from "@/components/footer";
+import { Toaster } from "../components/ui/sonner";
+import Footer from "../components/footer";
+import LenisProvider from "@/provider/lenis-provider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,13 +31,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen w-screen flex flex-col justify-between items-center bg-[#F4F4F4] ">
-          <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen border border-gray-300 border-dashed">
-            {children}
-          <Footer></Footer>
-          </main>
-          <Toaster />
-        </div>
+        <LenisProvider>
+          <div className="min-h-screen w-screen flex flex-col justify-between items-center bg-[#F4F4F4] ">
+            <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen border border-gray-300 border-dashed">
+              {children}
+              <Footer></Footer>
+            </main>
+            <Toaster />
+          </div>
+        </LenisProvider>
       </body>
     </html>
   );

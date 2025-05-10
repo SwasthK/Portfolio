@@ -1,5 +1,5 @@
 import { LucideProps } from "lucide-react";
-import  { ForwardRefExoticComponent, RefAttributes } from "react";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
 
 export type ProjectsDataTypes = {
     name: string,
@@ -19,9 +19,3 @@ export type ProjectsDataTypes = {
     summary: string,
 }
 
-export type SnippetsDataTypes = {
-    slug: string;
-    title: string;
-    description: string;
-    date: string;
-  };

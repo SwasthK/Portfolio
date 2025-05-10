@@ -1,7 +1,7 @@
-import { ProjectDetailsContainer } from "@/components/project-main/projectdetailscontainer";
-import { ProjectNotFound } from "@/components/project-meta-components/project-not-found";
-import { projectsData } from "@/lib/data";
-import { ProjectsDataTypes } from "@/lib/types";
+import { DataNotFound } from "@/components/data-not-found";
+import { ProjectDetails } from "@/components/projects/projectdetails";
+import { projectsData } from "@/lib/data/data-project";
+import { ProjectsDataTypes } from "@/lib/types/types-project";
 
 export default async function Projects({
   params,
@@ -15,15 +15,15 @@ export default async function Projects({
   );
 
   if (!result) {
-    return <ProjectNotFound />;
+    return <DataNotFound label="Project" redirect="/projects" />;
   }
 
   return (
     <div className="">
       {!result ? (
-        <ProjectNotFound />
+        <DataNotFound label="Project" redirect="/projects" />
       ) : (
-        <ProjectDetailsContainer project={result} />
+        <ProjectDetails project={result} />
       )}
     </div>
   );

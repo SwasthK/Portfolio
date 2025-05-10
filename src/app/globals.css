@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/* @plugin "@tailwindcss/typography"; */
+@import './prose.css';
 
 * {
   box-sizing: border-box;
@@ -38,6 +40,10 @@ body {
 .bg1 {
   @apply bg-[#EDEDED];
 }
+
+/* ::-webkit-scrollbar{
+  display: none;
+} */
 
 @custom-variant dark (&:is(.dark *));
 

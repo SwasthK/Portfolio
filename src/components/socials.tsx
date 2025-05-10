@@ -1,6 +1,5 @@
-import { socials } from "@/lib/data";
+import { socials } from "@/lib/data/data-socials";
 import { cn } from "@/lib/utils";
-import { Cli } from "./cli";
 import { Tooltip } from "./tooltip";
 import Link from "next/link";
 
@@ -24,9 +23,9 @@ export function Socials() {
           );
         })}
       </div>
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <Cli />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { IntroCard } from "@/components/introcard";
+import { IntroCard } from "../components/introcard";
 
 export default function Home() {
   return (

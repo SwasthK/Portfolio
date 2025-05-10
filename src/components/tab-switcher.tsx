@@ -1,9 +1,9 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { TabProjects } from "./tab-projects";
 import { TabSnippets } from "./tab-snippets";
 import { TabBlogs } from "./tab-blogs";
 import { TabExperience } from "./tab-experience";
-import { tabs } from "@/lib/data";
+import { tabs } from "@/lib/data/global";
 
 export function TabSwitcher() {
   return (
@@ -11,7 +11,7 @@ export function TabSwitcher() {
     <Tabs defaultValue={tabs[0].value} >
       <TabsList className="">
         {tabs.map((tab) => (
-          <TabsTrigger key={tab.value} value={tab.value} className="cursor-pointer flex items-center gap-2 hover:underline hover:underline-offset-4">
+          <TabsTrigger key={tab.value} value={tab.value} className="cursor-pointer flex items-center animated-text-100 gap-2 hover:underline hover:underline-offset-4">
            <p>{tab.name}</p>
           </TabsTrigger>
         ))}

@@ -1,0 +1,64 @@
+@plugin "@tailwindcss/typography";
+
+.prose code {
+    @apply font-mono text-black text-xs sm:text-sm ;
+  }
+  
+  .prose pre {
+    @apply p-5 whitespace-pre overflow-x-auto;
+  }
+  
+  .prose .code-block {
+    @apply text-black my-4;
+  }
+  
+  .prose .code-metadata {
+    @apply  font-sans text-sm flex justify-between;
+  }
+  
+  .prose .code-path {
+    @apply m-0 font-[480];
+  }
+  
+  .prose .code-metadata button {
+    @apply text-xs bg-[#eae1e1] px-2 rounded-[4px] cursor-pointer hover:bg-[#ccccd6] ;
+  }
+  
+  .prose .code-block pre {
+    @apply font-mono text-sm bg-[#EDEDED] mt-2 ;
+  } 
+  
+  .prose p{
+    @apply text-sm m-0;
+    line-height: 1.4rem;
+    color: #000000;
+  }
+  
+  .prose h1{
+    @apply text-2xl font-[800];
+  }
+  
+  .prose h2{
+    @apply text-[1.20rem] font-[650];
+  }
+  
+  .prose h3{
+    @apply text-[1rem] font-[600];
+  }
+  .prose{
+    @apply font-sans ;
+  }
+  
+  
+  .prose h1{
+    margin: .8rem 0;
+    @apply text-xl sm:text-3xl font-bold;
+  }
+  
+   .prose h2,.prose h3{
+    margin: .8rem 0;
+  }
+  
+  .prose ul li p ,.prose ol li p{
+    @apply text-sm font-normal;
+  }

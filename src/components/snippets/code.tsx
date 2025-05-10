@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { CopyText } from "../cli";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 export const Code = ({
   code,
@@ -10,7 +10,7 @@ export const Code = ({
   copytext,
   copytextClassName,
   copytextSuccess = "Copied Successfully",
-  copytextDescription = "You can now ",
+  copytextDescription = "You can now paste and use the copied code",
 }: {
   code?: string;
   path?: string;
@@ -35,17 +35,10 @@ export const Code = ({
           />
         )}
       </div>
-      <ScrollArea className=" whitespace-nowrap  bg-[#EDEDED] relative py-6 px-6  rounded-md border w-full text-sm font-mono ">
-        <code className="">
-          {/* <pre> */}
-          {code?.split("\n").map((line, i) => (
-            <span key={i} className="block  font-mono ">
-              {line}
-            </span>
-          ))}
-          {/* </pre> */}
-        </code>
-
+      <ScrollArea className="bg-[#EDEDED] relative py-6 px-6 border w-full text-sm font-mono">
+        <pre className="whitespace-pre font-mono">
+          <code>{code}</code>
+        </pre>
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
     </div>
