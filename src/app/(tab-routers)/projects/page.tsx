@@ -1,6 +1,11 @@
 import { DynamicLocalImage } from "@/components/image/blur-dynamic";
 import { projectsData } from "@/lib/data/data-project";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata:Metadata = {
+  title: "Projects",
+}
 
 export default function ProjectsPage() {
   return (

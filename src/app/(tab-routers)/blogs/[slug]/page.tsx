@@ -3,6 +3,12 @@ import { DataNotFound } from "@/components/data-not-found";
 import { blogsData } from "@/lib/data/data-blog";
 import { BlogsDataType } from "@/lib/types/types-blog";
 
+export function generateStaticParams() {
+  return blogsData.map((blog) => ({
+    slug: blog.slug,
+  }));
+}
+
 export default async function Blogs({
   params,
 }: {

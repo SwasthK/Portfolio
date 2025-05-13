@@ -3,6 +3,12 @@ import { DataNotFound } from "@/components/data-not-found";
 import { snippetsData } from "@/lib/data/data-snippet";
 import { SnippetsDataTypes } from "@/lib/types/types-snippet";
 
+export function generateStaticParams() {
+  return snippetsData.map((snippet) => ({
+    slug: snippet.slug,
+  }));
+}
+
 export default async function Snippets({
   params,
 }: {

@@ -1,7 +1,12 @@
 import TrackHeader from "@/components/track-header";
 import { blogsData } from "@/lib/data/data-blog";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata:Metadata = {
+  title: "Blogs",
+}
 
 export default function BlogsPage() {
   const isView = false;

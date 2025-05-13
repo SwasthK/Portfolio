@@ -31,14 +31,4 @@ export const blogsData: BlogsDataType[] = [
             "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
         content: `## How to Implement Lenis Smooth Scroll in Next.js (Step-by-Step Guide)`
     },
-    {
-        slug: "blog-3",
-        title: "Blog 3",
-        description:
-            "This is the second blog post. and it is a bit longer. It contains more information and details about the topic being discussed.",
-        date: "2023-10-03",
-        cover:
-            "https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png",
-        content: `## How to Implement Lenis Smooth Scroll in Next.js (Step-by-Step Guide)`
-    },
 ];

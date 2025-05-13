@@ -7,6 +7,11 @@ import {
 } from "@/components/ui/card";
 import TrackHeader from "@/components/track-header";
 import { snippetsData } from "@/lib/data/data-snippet";
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+  title: "Snippets",
+}
 
 export default function SnippetsPage() {
   const isView = false;
