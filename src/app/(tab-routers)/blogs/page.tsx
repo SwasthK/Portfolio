@@ -4,9 +4,11 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Blogs",
-}
+  description: "A collection of my thoughts and experiences.",
+  keywords: ["blogs", "articles", "writing"],
+};
 
 export default function BlogsPage() {
   const isView = false;

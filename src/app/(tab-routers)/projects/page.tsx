@@ -3,9 +3,11 @@ import { projectsData } from "@/lib/data/data-project";
 import { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Projects",
-}
+  description: "A collection of my projects.",
+  keywords: ["projects", "web development", "software development"],
+};
 
 export default function ProjectsPage() {
   return (

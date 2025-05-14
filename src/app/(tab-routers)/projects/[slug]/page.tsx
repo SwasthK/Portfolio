@@ -5,16 +5,36 @@ import { DynamicMetaDataType } from "@/lib/types/global";
 import { ProjectsDataTypes } from "@/lib/types/types-project";
 import { Metadata } from "next";
 
-export async function generateMetadata(
-  { params }: DynamicMetaDataType,
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: DynamicMetaDataType): Promise<Metadata> {
   const { slug } = await params;
+
+  const project = projectsData.find(
+    (project) => project.slug === slug.toLowerCase()
+  );
+
+  if (!project) {
+    return {
+      title: {
+        absolute: "Project Not Found",
+      },
+      description: "The requested code project could not be found.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
 
   return {
     title: {
-      absolute:`Project | ${slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, " ")}`,
+      absolute:
+        "Project | " +
+        project.slug.charAt(0).toUpperCase() +
+        project.slug.slice(1).replace(/-/g, " "),
     },
-    description: "Explore Swasthik's portfolio featuring modern full-stack web projects, UI/UX designs, and blog insights on development best practices. Available for freelance and full-time opportunities.",
+    description: project.desc,
   };
 }
 

@@ -9,9 +9,11 @@ import TrackHeader from "@/components/track-header";
 import { snippetsData } from "@/lib/data/data-snippet";
 import { Metadata } from "next";
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Snippets",
-}
+  description: "A collection of reusable components and hooks.",
+  keywords: ["snippets", "components", "hooks"],
+};
 
 export default function SnippetsPage() {
   const isView = false;
