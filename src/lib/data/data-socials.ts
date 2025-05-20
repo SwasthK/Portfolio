@@ -30,7 +30,7 @@ export const socials = [
     },
     {
         name: "Resume",
-        url: "https://drive.google.com/file/d/1BHPVzAMSh2jNQ58IpuBtXLwxapWguspm/view?usp=sharing",
+        url: "https://drive.google.com/file/d/10PHBEgu0lclLYdSq4t1BsNDit4vDz31u/view?usp=sharing",
         target: "_blank",
         icon: icons.FileTextIcon,
         className: "group-link",
