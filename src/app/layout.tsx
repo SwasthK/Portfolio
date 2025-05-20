@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import { defaultMetadata } from "@/lib/metadata";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 // import LenisProvider from "@/provider/lenis-provider";
 
@@ -36,7 +37,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <LenisProvider> */}
-        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -49,6 +49,8 @@ export default function RootLayout({
           >
             <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen border-x border-gray-300 dark:border-gray-600 border-dashed">
               {children}
+              <SpeedInsights />
+              <Analytics />
               <Footer></Footer>
             </main>
             <Toaster />
