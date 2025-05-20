@@ -5,6 +5,7 @@ import { Toaster } from "../components/ui/sonner";
 import Footer from "../components/footer";
 import { defaultMetadata } from "@/lib/metadata";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // import LenisProvider from "@/provider/lenis-provider";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <LenisProvider> */}
+        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
