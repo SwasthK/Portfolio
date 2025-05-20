@@ -3,6 +3,7 @@ import { Avatar as AvatarBase, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { socials } from "@/lib/data/data-socials";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 const AvatarIcon = "/images/profile/Avatar.png";
 
@@ -24,9 +25,10 @@ export function Avatar({
         opacity: 1,
       }}
       transition={{ duration: 1, ease: "easeIn" }}
+      className="flex justify-center items-center"
     >
       <Link href={socials[1].url} target="_blank">
-        <AvatarBase className={className}>
+        <AvatarBase className={cn("-rotate-10", className)}>
           <AvatarImage
             src={AvatarIcon || url}
             alt={name}

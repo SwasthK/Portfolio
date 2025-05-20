@@ -41,7 +41,7 @@ export const RenderWYSIWYG = ({ content }: { content: string }) => {
   return (
     <div
       ref={containerRef}
-      className={`prose`
+      className={`prose dark:prose-invert`
       }
       dangerouslySetInnerHTML={{ __html: content }}
     ></div>

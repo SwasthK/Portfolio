@@ -20,7 +20,7 @@ export default function ProjectsPage() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="flex gap-2  flex-col cursor-pointer hover:bg-[#EDEDED] border duration-200 p-2 rounded-md ease-in"
+            className="flex gap-2  flex-col cursor-pointer hover:bg-[#EDEDED] border duration-200 p-2 rounded-md ease-in shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
           >
             <DynamicLocalImage
               classcontainer="relative w-full h-32 rounded-md overflow-hidden"

@@ -10,7 +10,9 @@ export function TabProjects() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="flex gap-2 animated-text-200  flex-col cursor-pointer hover:bg-[#EDEDED] border duration-200 p-2 rounded-md ease-in"
+            className="flex gap-2 animated-text-200  flex-col cursor-pointer hover:bg-[#EDEDED] hover:dark:bg-[#201d1dbb] border duration-200 p-2 rounded-md ease-in
+            shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+            "
           >
             <div>
               <DynamicLocalImage
@@ -41,10 +43,10 @@ export function TabProjects() {
                   
                 </Link>
               </div> */}
-              <div className=" bg-[#EDEDED] text-[0.6rem] sans font-normal w-fit px-2 rounded-md">
+              <div className=" bg-[#EDEDED] dark:bg-[#201D1D] text-[0.6rem] sans font-normal w-fit px-2 rounded-md my-1">
                 {project.date}
               </div>
-              <p className="text-[#4F576C] text-xs sans font-light mt-1">
+              <p className="text-[#4F576C] dark-text text-xs sans font-light mt-1">
                 {project.desc}
               </p>
             </div>

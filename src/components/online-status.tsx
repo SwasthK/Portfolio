@@ -14,7 +14,7 @@ export function OnlineStatus() {
           } relative z-10 shadow-md`}
         ></div>
       </div>
-      <p className={`${isOnline ? "text-green-700" : "text-red-500"}`}>
+      <p className={`${isOnline ? "text-green-700 dark:text-green-400" : "text-red-500"}`}>
         {isOnline ? "Available for work" : `Offline [${4} min ago]`}
       </p>
     </div>

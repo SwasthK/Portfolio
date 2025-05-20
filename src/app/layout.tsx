@@ -4,6 +4,8 @@ import "./globals.css";
 import { Toaster } from "../components/ui/sonner";
 import Footer from "../components/footer";
 import { defaultMetadata } from "@/lib/metadata";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+
 // import LenisProvider from "@/provider/lenis-provider";
 
 export const geistSans = Geist({
@@ -28,18 +30,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <LenisProvider> */}
-          <div className="min-h-screen w-screen flex flex-col justify-between items-center bg-[#F4F4F4] ">
-            <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen border border-gray-300 border-dashed">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div
+            className="min-h-screen w-screen flex flex-col justify-between items-center bg-[#F4F4F4] dark:bg-[#111010]
+          "
+          >
+            <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen border-x border-gray-300 dark:border-gray-600 border-dashed">
               {children}
               <Footer></Footer>
             </main>
             <Toaster />
           </div>
+        </ThemeProvider>
         {/* </LenisProvider> */}
       </body>
     </html>

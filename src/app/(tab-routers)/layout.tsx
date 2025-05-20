@@ -20,8 +20,8 @@ export default async function TabRouterLayout({
             key={profile.name}
           ></Avatar>
           <div className="flex flex-col gap-1">
-            <p className="text-[#353b59] text-[.9rem]">{profile.name}</p>
-              <p className="text-[#4F576C] text-xs  font-light">
+            <p className="text-[#353b59] text-[.9rem] dark:text-white">{profile.name}</p>
+              <p className="text-[#4F576C] text-xs  font-light dark-text">
                 Stealth
               </p>
           </div>

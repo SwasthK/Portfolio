@@ -9,7 +9,7 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
     <div className="flex flex-col gap-6 sans">
       <div className="flex flex-col gap-1">
         <h1 className="text-2xl font-[500]">{project.name}</h1>
-        <p className="text-sm text-[#4F576C] font-light">{project.desc}</p>
+        <p className="text-sm text-[#4F576C] font-light dark-text">{project.desc}</p>
       </div>
       <DynamicLocalImage
         classcontainer="relative aspect-video overflow-hidden rounded-[5px]"
@@ -26,7 +26,7 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
               <Link
                 href={l.url}
                 target="_blank"
-                className="flex gap-2 items-center bg-[#DEDEDE] px-4 py-2 rounded-[5px]"
+                className="flex gap-2 items-center bg-[#DEDEDE] dark:bg-accent px-4 py-2 rounded-[5px]"
               >
                 <Icon size={18}></Icon>
                 <p>{l.name}</p>
@@ -36,12 +36,12 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
         })}
       </div>
       <div>
-        <p className="text-sm text-black">Tech Stacks Used : </p>
+        <p className="text-sm text-black dark:text-white">Tech Stacks Used : </p>
         <div className="flex gap-2 flex-wrap mt-2">
           {project.stacks?.map((s: string) => (
             <p
               key={s}
-              className="text-sm text-[#4F576C] font-light  px-2 py-1 rounded-[5px]"
+              className="text-sm text-[#4F576C] dark-text font-light  px-2 py-1 rounded-[5px]"
             >
               {s} |
             </p>
@@ -74,7 +74,7 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
         </div>
       </div>
       <div>
-        <p className="text-[0.95rem] text-[#3f485e] italic mt-2">
+        <p className="text-[0.95rem] text-[#3f485e] italic mt-2 dark-text">
           &ldquo; {project.summary} &rdquo;
         </p>
       </div>

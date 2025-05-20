@@ -29,9 +29,9 @@
   } 
   
   .prose p{
-    @apply text-sm m-0;
     line-height: 1.4rem;
     color: #000000;
+    @apply text-sm m-0 dark:text-[#e0f5fc] ;
   }
   
   .prose h1{
@@ -60,5 +60,5 @@
   }
   
   .prose ul li p ,.prose ol li p{
-    @apply text-sm font-normal;
+    @apply text-sm font-normal  ;
   }

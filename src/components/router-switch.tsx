@@ -11,8 +11,8 @@ export default function RouterSwitch() {
       onClick={() => router.back()}
       className="tx2 text-sm  flex gap-2 items-center cursor-pointer"
     >
-      <ArrowLeft size={16} />
-      <p>Back</p>
+      <ArrowLeft size={16} className="dark:text-white"/>
+      <p className="dark-text">Back</p>
     </div>
   );
 }

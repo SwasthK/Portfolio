@@ -13,6 +13,10 @@ body {
   height: 100%;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .sans {
   @apply font-[family-name:var(--font-geist-sans)];
 }
@@ -250,4 +254,8 @@ body {
 
 .animate-slow-ping {
   animation: slow-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.dark-text{
+  @apply dark:text-[#9CA3AF];
 }

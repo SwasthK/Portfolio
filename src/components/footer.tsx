@@ -1,5 +1,7 @@
 import { CalendarDays } from "lucide-react";
 import Link from "next/link";
+import { ModeToggle } from "./theme/toggle-theme";
+import { SiteVisits } from "./site-visits";
 
 export default function Footer() {
   return (
@@ -7,11 +9,11 @@ export default function Footer() {
       <div className="text-[.9rem] flex flex-col items-center gap-3">
         <p>Want to hire me as a frelancer ? </p>
         <Link
-          className="bg-[#EDEDED] px-2 py-1 border"
+          className="bg-[#EDEDED] dark:bg-[#201D1D] px-2 py-1 border"
           href={"https://cal.com/swasthk/15min"}
           target="_blank"
         >
-         <p className="text-sm"> Let&apos;s have a chat</p>
+          <p className="text-sm"> Let&apos;s have a chat</p>
         </Link>
       </div>
       <div className=" pt-16  text-xs flex gap-[24px] flex-wrap items-center justify-center">
@@ -24,7 +26,7 @@ export default function Footer() {
           <CalendarDays size={16} />
           Cal.com
         </Link>
-        {/* <SiteVisits /> */}
+        <SiteVisits />
         <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://discord.gg/Bpsj4eaE"
@@ -56,6 +58,7 @@ export default function Footer() {
           {/* → */}
         </Link>
       </div>
+      <ModeToggle />
     </footer>
   );
 }

@@ -5,13 +5,14 @@ import { DashLine } from "./dashline";
 import { TabSwitcher } from "./tab-switcher";
 import { Skills } from "./skills";
 import { OnlineStatus } from "./online-status";
+import { ProfileTag } from "./profile-tag";
 
 export function IntroCard() {
   return (
     <section className="">
-      <div className="flex gap-6 sans  ">
+      <div className="flex gap-3 sans  ">
         <Avatar
-          className="h-24 w-24 rounded-[5px] animate-primary"
+          className="h-[5.5rem] w-[5.5rem] rounded-[5px] animate-primary"
           name={profile.name}
           url={profile.image}
         />
@@ -22,7 +23,8 @@ export function IntroCard() {
             </p>
           </div>
           <div className="flex gap-4 items-center text-xs">
-            <p className="animated-text-100 tx1">{profile.tag}</p>
+            {/* <p className="animated-text-100 tx1">{profile.tag}</p> */}
+            <ProfileTag />
             <OnlineStatus />
           </div>
           <Socials></Socials>
@@ -31,8 +33,8 @@ export function IntroCard() {
 
       <DashLine />
 
-      <div className="flex gap-4 items-center justify-between w-full animate-primary">
-        <div className="bg-[#EDEDED] px-3 py-2 text-xs sm:text-sm rounded-[5px] sans tx1 font-[370]">
+      <div className="flex gap-4 items-center justify-between w-full animate-primary ">
+        <div className="bg-[#EDEDED] dark:bg-[#2e2b2b84] text-[#412222] border dark:text-white px-3 py-2 text-xs sm:text-sm rounded-[5px] sans font-[370]">
           {profile.desc}
         </div>
       </div>

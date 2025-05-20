@@ -10,12 +10,12 @@ export function TabExperience() {
         {experienceData.map((e) => (
           <div
             key={e.name}
-            className="flex gap-4  flex-col cursor-pointer bg-[#EDEDED] border duration-200 p-6 rounded-md relative"
+            className="flex gap-4  flex-col cursor-pointer bg-[#EDEDED] dark:bg-[#201D1D] border duration-200 p-6 rounded-md relative"
           >
             <div className="flex justify-between items-center">
               <div className="flex flex-col">
                 <p className="text-[1rem] sans font-medium">{e.name}</p>
-                <div className=" bg-[#EDEDED] text-[0.6rem] sans font-normal w-fit px-2 rounded-md">
+                <div className=" bg-[#EDEDED] dark:bg-accent text-[0.6rem] sans font-normal w-fit px-2 rounded-md">
                   {e.date}
                 </div>
               </div>
@@ -23,18 +23,18 @@ export function TabExperience() {
                 src={e.image}
                 alt={e.name}
                 classcontainer="relative w-28 h-14"
-                classimage="absolute object-contain object-center rounded-md "
+                classimage="absolute object-contain object-center rounded-md  dark:bg-white"
               />
             </div>
 
-            <p className="text-[#4F576C] text-sm sans font-light">{e.desc}</p>
+            <p className="text-[#4F576C] text-sm sans font-light dark-text">{e.desc}</p>
             <div className="flex gap-2 items-start flex-wrap">
               {e.stacks.map((item) => (
                 <div
                   key={item}
-                  className=" relative sans px-2 py-1.5 rounded-[5px] bg-white"
+                  className=" relative sans px-2 py-1.5 rounded-[5px] bg-white dark:bg-accent"
                 >
-                  <p className="text-xs font-light text-[#4F576C]">{item}</p>
+                  <p className="text-xs font-light text-[#4F576C] dark:text-white">{item}</p>
                 </div>
               ))}
             </div>
