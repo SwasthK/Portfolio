@@ -4,12 +4,12 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
     try {
-
-        const cookieStore = cookies();
-        const existingCookie = (await cookieStore).get("visitorId");
+        const cookieStore = await cookies();
+        const existingCookie = cookieStore.get("visitorId");
 
         if (!existingCookie) {
             const newVisitorId = crypto.randomUUID();
+
             await prisma.uniqueVisitor.create({
                 data: {
                     visitorId: newVisitorId,
@@ -17,11 +17,13 @@ export async function GET() {
                 },
             });
 
-            (await cookieStore).set("visitorId", newVisitorId, {
-                maxAge: 60 * 60 * 24 * 365, // 1 year
+            const res = NextResponse.json({ message: "New visitor tracked" });
+            res.cookies.set("visitorId", newVisitorId, {
+                maxAge: 60 * 60 * 24 * 365,
                 httpOnly: false,
             });
 
+            return res;
         }
 
         const uniqueVisitors = await prisma.uniqueVisitor.count();
