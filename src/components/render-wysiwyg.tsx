@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { toast } from "sonner";
 
 export const RenderWYSIWYG = ({ content }: { content: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +25,9 @@ export const RenderWYSIWYG = ({ content }: { content: string }) => {
 
         if (codeText) {
           navigator.clipboard.writeText(codeText).then(() => {
-            alert("Copied!");
+            toast.success("Code copied to clipboard!",{
+              description: "You can now paste it anywhere.",
+            });
           });
         }
       }
@@ -41,8 +44,7 @@ export const RenderWYSIWYG = ({ content }: { content: string }) => {
   return (
     <div
       ref={containerRef}
-      className={`prose dark:prose-invert`
-      }
+      className={`prose dark:prose-invert`}
       dangerouslySetInnerHTML={{ __html: content }}
     ></div>
   );

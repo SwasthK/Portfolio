@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "../components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 import Footer from "../components/footer";
 import { defaultMetadata } from "@/lib/metadata";
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -52,8 +52,8 @@ export default function RootLayout({
               <SpeedInsights />
               <Analytics />
               <Footer></Footer>
+              <Toaster />
             </main>
-            <Toaster />
           </div>
         </ThemeProvider>
         {/* </LenisProvider> */}

@@ -9,7 +9,9 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
     <div className="flex flex-col gap-6 sans">
       <div className="flex flex-col gap-1">
         <h1 className="text-2xl font-[500]">{project.name}</h1>
-        <p className="text-sm text-[#4F576C] font-light dark-text">{project.desc}</p>
+        <p className="text-sm text-[#4F576C] font-light dark-text">
+          {project.desc}
+        </p>
       </div>
       <DynamicLocalImage
         classcontainer="relative aspect-video overflow-hidden rounded-[5px]"
@@ -36,7 +38,9 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
         })}
       </div>
       <div>
-        <p className="text-sm text-black dark:text-white">Tech Stacks Used : </p>
+        <p className="text-sm text-black dark:text-white">
+          Tech Stacks Used :{" "}
+        </p>
         <div className="flex gap-2 flex-wrap mt-2">
           {project.stacks?.map((s: string) => (
             <p
@@ -61,11 +65,21 @@ export function ProjectDetails({ project }: { project: ProjectsDataTypes }) {
         ))} */}
       </div>
       <div>
-        <div className="grid grid-cols-2 gap-3">
+        <div
+          className={`grid ${
+            (project.images?.length ?? 0) > 1
+              ? "grid-cols-2 gap-3"
+              : "grid-cols-1"
+          } `}
+        >
           {project.images?.map((image, index) => (
             <DynamicLocalImage
               key={index}
-              classcontainer="relative aspect-square"
+              classcontainer={`relative  ${
+                (project.images?.length ?? 0) > 1
+                  ? "aspect-square"
+                  : "aspect-video"
+              } `}
               classimage="rounded-[5px] absolute w-full  object-cover"
               src={image}
               alt={image}

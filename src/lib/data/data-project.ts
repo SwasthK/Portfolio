@@ -3,6 +3,43 @@ import { icons } from "./global";
 
 export const projectsData: ProjectsDataTypes[] = [
     {
+        name: "fsmap-cli",
+        slug: "fsmap-cli",
+        desc: "A powerful CLI tool for managing and visualizing file system structures with ease.",
+        cover:
+            "/images/projects/fsmap/cover.png",
+        url: "https://www.npmjs.com/package/fsmapkit",
+        date: "26 Mar 2025",
+        content: `<p><strong>fsmap</strong> is a powerful CLI tool that scans any directory (local or remote GitHub repo) and visualizes its folder structure in a clean, tree-like format.</p><p>Supports output as text, markdown, JSON, and even integrates file size, modified dates, and Git status.</p><h3>Features </h3><ul class="list-disc list-outside leading-3  marker:text-black -mt-2"><li class="leading-normal -mb-2"><p>📁 Visualize any local folder structure</p></li><li class="leading-normal -mb-2"><p>🌍 Fetch and display <strong>GitHub repo structure</strong> via <code class="text-black rounded-md  mono  px-1.5 py-1 text-sm" spellcheck="false">--repo</code></p></li><li class="leading-normal -mb-2"><p>🧹 Smart one-repo caching system (reuse if same repo, delete if not)</p></li><li class="leading-normal -mb-2"><p>💾 Show file sizes (<code class="text-black rounded-md  mono  px-1.5 py-1 text-sm" spellcheck="false">--show-size</code>)</p></li><li class="leading-normal -mb-2"><p>🕒 Show last modified dates (<code class="text-black rounded-md  mono  px-1.5 py-1 text-sm" spellcheck="false">--show-date</code>)</p></li><li class="leading-normal -mb-2"><p>🧑‍💻 Show Git status (<code class="text-black rounded-md  mono  px-1.5 py-1 text-sm" spellcheck="false">--show-git</code>)</p></li><li class="leading-normal -mb-2"><p>📝 Output as: text (default), markdown, JSON, or HTML</p></li><li class="leading-normal -mb-2"><p>📄 Save output to a file</p></li><li class="leading-normal -mb-2"><p>🔍 Works recursively with depth control</p></li></ul><h3>Installation</h3><div class="code-block"><div class="code-metadata"><p class="code-path"> as a global dependency</p><button class="code-copy">Copy</button></div><pre data-path="as a global dependency"><code>npm install -g fsmap-cli</code></pre></div><div class="code-block"><div class="code-metadata"><p class="code-path"> as a dev dependency</p><button class="code-copy">Copy</button></div><pre data-path="as a dev dependency"><code>npm install -D fsmap-cli</code></pre></div><h3>Usage</h3><div class="code-block"><div class="code-metadata"><p class="code-path"> In your project</p><button class="code-copy">Copy</button></div><pre data-path="In your project"><code>npx fsmap</code></pre></div><p><br></p><p>See Usage and Installation guide here : <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.npmjs.com/package/fsmapkit">https://www.npmjs.com/package/fsmapkit</a></p><p><br></p><p>Valid Contributions are allowed here : <a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/SwasthK/fsmap">https://github.com/SwasthK/fsmap</a></p>`,
+        images: [
+            "/images/projects/fsmap/p1.png",
+            // "/images/projects/ekashunyam/p2.png",
+            // "/images/projects/ekashunyam/p3.png",
+            // "/images/projects/ekashunyam/p4.png",
+        ],
+        stacks: [
+            "Node.js",
+            "TypeScript",
+            "Commander.js",
+            "tsup",
+            "npm",
+            "cli-spinner",
+        ],
+        summary: "fsmap-cli is a powerful CLI tool built with Node.js and TypeScript, designed to manage and visualize file system structures efficiently, featuring commands for directory listing, file searching, and more.",
+        links: [
+            {
+                name: "Source Code",
+                icon: icons.Github,
+                url: "https://github.com/SwasthK/fsmap"
+            },
+            {
+                name: "Package",
+                icon: icons.Globe,
+                url: "https://www.npmjs.com/package/fsmapkit"
+            }
+        ]
+    },
+    {
         name: "Ekashunyam 2.0",
         slug: "ekashunyam",
         desc: "A dynamic and scalable platform for managing intercollegiate events with ease and efficiency.",

@@ -1,7 +1,7 @@
 @plugin "@tailwindcss/typography";
 
 .prose code {
-    @apply font-mono text-black text-xs sm:text-sm ;
+    @apply font-mono text-black text-xs sm:text-sm dark:text-white;
   }
   
   .prose pre {
@@ -9,7 +9,7 @@
   }
   
   .prose .code-block {
-    @apply text-black my-4;
+    @apply text-black my-4 dark:text-white;
   }
   
   .prose .code-metadata {
@@ -21,11 +21,11 @@
   }
   
   .prose .code-metadata button {
-    @apply text-xs bg-[#eae1e1] px-2 rounded-[4px] cursor-pointer hover:bg-[#ccccd6] ;
+    @apply text-xs bg-[#eae1e1] dark:bg-[#262626]  px-2 rounded-[4px] cursor-pointer hover:bg-[#ccccd6] ;
   }
   
   .prose .code-block pre {
-    @apply font-mono text-sm bg-[#EDEDED] mt-2 ;
+    @apply font-mono text-sm bg-[#EDEDED] mt-2 dark:bg-[#262626] ;
   } 
   
   .prose p{
