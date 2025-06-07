@@ -44,10 +44,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div
-            className="min-h-screen w-screen flex flex-col justify-between items-center bg-[#F4F4F4] dark:bg-[#1a1818]
+            className="min-h-screen w-screen flex flex-col justify-between items-center bg-[#F4F4F4] dark:bg-[#171717]
           "
           >
-            <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen border-x border-gray-300 dark:border-gray-600 border-dashed">
+            <main className="max-w-[80ch] pt-24 relative px-8 mx-auto w-full  min-h-screen sm:border-x border-gray-300 dark:border-gray-600 border-dashed">
               {children}
               <SpeedInsights />
               <Analytics />

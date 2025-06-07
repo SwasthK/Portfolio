@@ -35,7 +35,7 @@ export const projectsData: ProjectsDataTypes[] = [
             {
                 name: "Package",
                 icon: icons.Globe,
-                url: "https://www.npmjs.com/package/fsmapkit"
+                url: "https://www.npmjs.com/package/fsmap-cli"
             }
         ]
     },

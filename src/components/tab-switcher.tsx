@@ -11,7 +11,7 @@ export function TabSwitcher() {
     <Tabs defaultValue={tabs[0].value} >
       <TabsList className="">
         {tabs.map((tab) => (
-          <TabsTrigger key={tab.value} value={tab.value} className="cursor-pointer flex items-center animated-text-100 gap-2 hover:underline hover:underline-offset-4">
+          <TabsTrigger key={tab.value} value={tab.value} className="data-[state=active]:underline data-[state=active]:underline-offset-6 hover:underline-offset-6 cursor-pointer flex items-center animated-text-100 gap-2 hover:underline hover:font-semibold transition-all duration-200 ease-in">
            <p>{tab.name}</p>
           </TabsTrigger>
         ))}
