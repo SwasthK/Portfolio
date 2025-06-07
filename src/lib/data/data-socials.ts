@@ -21,7 +21,7 @@ export const socials = [
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/swasthik-k-a788aa255/",
+        url: "https://www.linkedin.com/in/swasthk/",
         target: "_blank",
         icon: icons.Linkedin,
         className: "group-link",
@@ -39,7 +39,7 @@ export const socials = [
     },
     {
         name: "Email",
-        url: "mailto:swasth319@gmail.com",
+        url: "mailto:swasthk.work@gmail.com",
         target: "_blank",
         icon: icons.MailIcon,
         className: "group-link",
