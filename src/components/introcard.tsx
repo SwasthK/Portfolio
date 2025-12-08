@@ -12,7 +12,7 @@ export function IntroCard() {
     <section className="">
       <div className="flex gap-3 sans  ">
         <Avatar
-          className="h-[5.5rem] w-[5.5rem] rounded-[5px] animate-primary"
+          className="h-[5.5rem] w-[5.5rem] animate-primary"
           name={profile.name}
           url={profile.image}
         />

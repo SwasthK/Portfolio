@@ -5,8 +5,6 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
-const AvatarIcon = "/images/profile/Avatar.png";
-
 export function Avatar({
   url,
   name,
@@ -28,9 +26,9 @@ export function Avatar({
       className="flex justify-center items-center"
     >
       <Link href={socials[1].url} target="_blank">
-        <AvatarBase className={cn("-rotate-10", className)}>
+        <AvatarBase className={cn("rounded-full", className)}>
           <AvatarImage
-            src={AvatarIcon || url}
+            src={url}
             alt={name}
             className="object-cover object-center"
           />
